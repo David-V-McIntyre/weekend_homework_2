@@ -3,7 +3,7 @@ class Room:
         self.room_name = room_name
         self.guests = []
         self.room_capacity = room_capacity
-        self.song_in_room = []
+        self.playlist = []
 
     def number_of_guests(self):
         return len(self.guests)
@@ -13,3 +13,9 @@ class Room:
     
     def remove_guest_from_room(self, guest):
         self.guests.remove(guest)
+
+    def length_of_playlist(self):
+        return len(self.playlist)
+
+    def add_song_to_playlist(self, song):
+        self.playlist.append(song)
