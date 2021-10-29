@@ -24,3 +24,9 @@ class TestRoom(unittest.TestCase):
         self.Room1.add_guest_to_room(self.guest1)
         self.Room1.add_guest_to_room(self.guest2)
         self.assertEqual(2, self.Room1.number_of_guests())
+
+    def test_add_guest_to_room(self):
+        self.Room1.add_guest_to_room(self.guest1)
+        self.Room1.add_guest_to_room(self.guest2)
+        self.Room1.remove_guest_from_room(self.guest1)
+        self.assertEqual(1, self.Room1.number_of_guests())
