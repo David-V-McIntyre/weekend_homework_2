@@ -38,7 +38,12 @@ class TestRoom(unittest.TestCase):
         self.Room1.remove_guest_from_room(self.guest1)
         self.assertEqual(1, self.Room1.number_of_guests())
 
+    def test_playlist_starts_empty(self):
+        self.assertEqual(0, self.Room3.length_of_playlist())
+
     def test_add_song_to_playlist(self):
         self.Room3.add_song_to_playlist(self.song1)
         self.Room3.add_song_to_playlist(self.song2)
         self.assertEqual(2, self.Room3.length_of_playlist())
+
+    
