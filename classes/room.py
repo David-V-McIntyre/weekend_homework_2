@@ -11,10 +11,11 @@ class Room:
     
 
     def add_guest_to_room(self, guest):
-        if len(self.guests) > self.room_capacity:
-            return "This room does not have enough space!"
+        if self.room_at_capacity():
+            return "room capacity is too low"
         else:
             self.guests.append(guest)
+        
     
     def remove_guest_from_room(self, guest):
         self.guests.remove(guest)
@@ -24,3 +25,6 @@ class Room:
 
     def add_song_to_playlist(self, song):
         self.playlist.append(song)
+
+    def room_at_capacity(self):
+        return self.number_of_guests() > self.room_capacity
