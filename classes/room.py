@@ -11,7 +11,7 @@ class Room:
     
 
     def add_guest_to_room(self, guest):
-        if self.room_at_capacity():
+        if self.room_at_capacity() == True:
             return "room capacity is too low"
         else:
             self.guests.append(guest)

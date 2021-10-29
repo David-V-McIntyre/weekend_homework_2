@@ -49,10 +49,14 @@ class TestRoom(unittest.TestCase):
         self.Room3.add_song_to_playlist(self.song2)
         self.assertEqual(2, self.Room3.length_of_playlist())
     
-    def test_room_at_capactiy(self):
+    def test_room_at_capacity_true(self):
         self.Room3.add_guest_to_room(self.guest1)
         self.Room3.add_guest_to_room(self.guest2)
         self.Room3.add_guest_to_room(self.guest3)
         self.assertEqual(True, self.Room3.room_at_capacity())
-
+    
+    def test_room_at_capacity_false(self):
+        self.Room3.add_guest_to_room(self.guest1)
+        self.Room3.add_guest_to_room(self.guest2)
+        self.assertEqual(False, self.Room3.room_at_capacity())
     
