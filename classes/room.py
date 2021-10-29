@@ -1,9 +1,10 @@
 class Room:
-    def __init__(self, room_name, room_capacity):
+    def __init__(self, room_name, room_capacity, entry_fee):
         self.room_name = room_name
         self.guests = []
         self.room_capacity = room_capacity
         self.playlist = []
+        self.entry_fee = entry_fee
 
     def number_of_guests(self):
         return len(self.guests)
@@ -12,7 +13,7 @@ class Room:
         self.guests.append(guest)
         if self.number_of_guests() > self.room_capacity:
             self.guests.clear()
-            print("room is too small")
+            return "room is too small"
         
         
     
@@ -24,7 +25,6 @@ class Room:
 
     def add_song_to_playlist(self, song):
         self.playlist.append(song)
+    
 
-    # def room_at_capacity(self):
-    #     if self.number_of_guests() > self.room_capacity:
-    #         return True
+  
