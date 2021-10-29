@@ -56,8 +56,6 @@ class TestRoom(unittest.TestCase):
         self.room3.add_guest_to_room(self.guest2)
         self.assertEqual(0, self.room1.number_of_guests())
     
-    # def test_customer_pays_entry_fee(self):
-    #     self.room2.guest_pays_entry(self.room2, self.guest2)
-    #     self.assertEqual(20, guest2.wallet)
+    
 
     
